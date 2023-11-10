@@ -1,0 +1,98 @@
+/*reseta css padrão do navegador*/
+/** {
+  margin: 0;
+  padding: 0;
+  muda a maneira que conta o tamanho das caixas ignorando o padding e mantendo como padrão 580 px
+  box-sizing: border-box;
+}*/
+
+body * {
+font-family: "Open Sans";
+margin: auto;
+line-height: 160%;
+
+}
+
+h2{
+  color: #FF9900;
+}
+p {
+  color: white;
+}
+
+.link-recipe {
+  color: #f0b154;
+}
+
+header section{
+  /* padding-top: 32px; */
+  justify-content: center;
+   margin: auto; 
+   text-align: center;
+   
+
+}
+
+  .header {
+  font-family: 'Lobster', cursive;
+  color: orange;
+  font-size: 40px;
+}
+
+header div{
+  background-color: #3d3d44;
+  width: 1000px;
+  
+}
+
+main{
+  margin: 32px auto;
+  width: 900px;
+  align-items: center; 
+  display:grid;
+  gap: 24px;
+}
+
+section div {
+  background-color: #3d3d44;
+  padding: 32px;
+  padding-top: 24px;
+  border-radius: 8px;
+  align-items: center
+}
+
+section ul {
+  display: flex;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+section ul li {
+  transition: transform .3s
+}
+
+section ul li:hover {
+  transform: scale(1.1)
+}
+
+.list-mainCourse img {
+  width: 270px;
+  flex-wrap:wrap;
+  border-radius: 8px;
+}
+
+.list-desserts img {
+  width: 270px;
+  flex-wrap:wrap;
+  border-radius: 8px;
+}
+
+ul{
+  /*tira pontinhos da lista*/
+  list-style: none;
+}
+
+section {
+  /* padding-top: 4px; */
+}

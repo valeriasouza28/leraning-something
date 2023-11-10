@@ -1,0 +1,37 @@
+/*div {
+  color: white;
+}*/
+
+/* ----Seleciona elemento por class ----
+.alert-text {
+  color: red;
+}*/
+
+/* ----Seleciona elemeto id---- */
+/*#title{
+  background-color: red;
+}*/
+
+/* ---- Seletor de agrupamento ----
+Tanto o nosso .readquanto os .unreadseletores compartilham as declarações color: white;e background-color: black;, mas, por outro lado, têm várias de suas próprias declarações exclusivas. Para reduzir a repetição, podemos agrupar esses dois seletores como uma lista separada por vírgulas:
+
+.read {
+  color: white;
+  background-color: black;
+    
+}
+
+.unread {
+  color: white;
+  background-color: black;
+ 
+}
+
+separado por virgulas
+
+.read,
+.unread {
+  color: white;
+  background-color: black;
+}*/
+

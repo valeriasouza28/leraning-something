@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// cria tabela
+model User {
+  // cria o campo id e determina que por padrão ele vai ser uma chave ùnica gerada de forma aleatória (pela lib uuid)
+  id        String @id @default(uuid())
+  githubId  Int    @unique
+  name      String
+  // login do github
+  login     String
+  // avatar do github
+  avatarUrl String
+
+  // cria um relacionamento inverso com tabela Memory onde um usuário  pode conter varias memórias
+  memories Memory[]
+}
+
+model Memory {
+  id        String   @id @default(uuid())
+  userId    String
+  // endereço da imagem ou video de fundo
+  coverUrl  String
+  content   String
+  isPublic  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  // Toda memória pertence a um usuário criando um relacionamento entre as tabelas
+  user User @relation(fields: [userId], references: [id])
+}
